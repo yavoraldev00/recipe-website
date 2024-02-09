@@ -6,6 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Recipe</title>
+<style>
+    .cursor-clickable * {
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
     <header class="py-3">
@@ -89,23 +94,41 @@
             </div>
             <div class="col-6">
                 <h1>Moelieux chocolat ganache myrtiles</h1>
-                <div class="text-muted small d-block">
-                    Categories: <inline><a class="text-decoration-none text-dark mx-1" href="#">Cake</a>,<a class="text-decoration-none text-dark mx-1" href="#">Deserts</a>,<a class="text-decoration-none text-dark mx-1" href="#">Chocolate</a></inline>
-                </div>
-                
-                <div class="d-flex align-items-center gap-2">
-                    <div class="d-flex text-warning">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                    </div>
 
-                    <a class="text-decoration-none small" href="#">Reviews (18 comments)</a>
+                <div class="d-flex justify-content-between gap-1">
+                    <div>
+                        <div class="text-muted small d-block">
+                            Categories: <inline><a class="text-decoration-none text-dark mx-1" href="#">Cake</a>,<a class="text-decoration-none text-dark mx-1" href="#">Deserts</a>,<a class="text-decoration-none text-dark mx-1" href="#">Chocolate</a></inline>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="d-flex text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+        
+                            <a class="text-decoration-none small" href="#">Reviews (18 comments)</a>
+                        </div>
+                        
+                        <div class="text-muted d-block small">Author: <em><a class="text-decoration-none text-muted" href="#">John Doe</a></em></div>
+                    </div>
+                    
+                    <div>
+                        <div class="d-flex flex-column align-items-end gap-2 mt-2">
+                            <div class="d-flex gap-1 align-items-center btn btn-outline-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 20 20"><path fill="currentColor" d="M12 6V2l7 7l-7 7v-4c-5 0-8.5 1.5-11 5l.8-3l.2-.4A12 12 0 0 1 12 6"/></svg>
+                                <p class="mb-0 small fw-bold h6">Share</p>
+                            </div>
+                            <div class="d-flex gap-1 align-items-center btn btn-outline-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v16l-7-3zm2-3.05l5-2.15l5 2.15V5H7zM7 5h10z"/></svg>
+                                <p class="mb-0 fw-bold h6">Favorite</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="text-muted d-block small">Author: <em><a class="text-decoration-none text-muted" href="#">John Doe</a></em></div>
 
                 <div class="mt-5">
                     <div class="row">
@@ -163,7 +186,20 @@
                       </div>
                       <div id="accordion-body-item-1" class="accordion-collapse collapse show" aria-labelledby="accordion-item-1">
                         <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex gap-2 cursor-clickable">
+                                    <input type="checkbox" class="form-check-input" id="task1">
+                                    <label for="task1" class="form-check-label flex-grow-1">Task 1</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" class="form-check-input" id="task2">
+                                    <label for="task2" class="form-check-label">Task 2</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" class="form-check-input" id="task3">
+                                    <label for="task3" class="form-check-label">Task 3</label>
+                                </li>
+                            </ul>
                         </div>
                       </div>
                     </div>
