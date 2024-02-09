@@ -14,6 +14,35 @@
     .highlight-background {
         background-color: #fbfbfb;
     }
+
+    .callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code {
+    border-radius: 3px;
+  }
+  & + .bs-callout {
+    margin-top: -5px;
+  }
+}
+@each $name,$color in (default,#777),(primary,#428bca),(success,#5cb85c),(danger,#d9534f),(warning,#f0ad4e),(info,#5bc0de), (bdc,#29527a) {
+  .callout-#{$name} {
+    border-left-color: $color;
+    h4 {
+      color: $color;
+    }
+  }
+}
 </style>
 </head>
 <body>
@@ -190,6 +219,11 @@
                       </div>
                       <div id="accordion-body-item-1" class="accordion-collapse collapse show" aria-labelledby="accordion-item-1">
                         <div class="accordion-body">
+                            <div class="callout callout-success">
+                                <p class="h5 mb-0">Note:</p>
+                                <em class="text-muted small">Eggs, cream cheese and heavy cream must be room temperature before preparing. To do this, simply leave your ingredients outside the fridge for 30 min.</em>
+                            </div>
+
                             <ul class="list-group">
                                 <li class="list-group-item d-flex cursor-clickable">
                                     <input type="checkbox" class="form-check-input" id="ingredient1">
@@ -286,7 +320,7 @@
                     <div id="accordion-body-instructions" class="accordion-collapse collapse show" aria-labelledby="accordion-instructions">
                       <div class="accordion-body">
 
-                        
+
                         <ol>
                             <p class="lead text-decoration-underline mb-0">Crust</p>
                             <li>Lorem ipsum dolor sit amet.</li>
