@@ -409,8 +409,25 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div id="gallery"></div>
+    <section class="pt-2 mx-5 mt-3" id="reviews">
+        <h3 class="text-center">Reviews</h3>
+        <p class="text-muted text-center">72 responses</p>
+
+        <div>
+            <form action="" class="d-flex flex-column gap-2 col-10 col-md-9 col-lg-6 mx-auto mt-5">
+                <label for="email" class="fw-bold">E-MAIL (required)</label>
+                <input id="email" type="email" placeholder="e.g. johndoe@email.com">
+                <label for="name" class="fw-bold">NAME (optional)</label>
+                <input id="name" type="text" placeholder="e.g. John Doe (default Anonymous)">
+                <label for="rating" class="fw-bold">RATING (required)</label>
+                <!-- <input id="rating" type="email" placeholder="e.g. johndoe@email.com"> -->
+                <label for="comment" class="fw-bold">COMMENT (required)</label>
+                <textarea id="comment"></textarea>
+                <button class="btn btn-primary mt-3s">Post Response</button>
+            </form>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
